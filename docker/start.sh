@@ -1,15 +1,15 @@
 #!/bin/bash
 set -e
 
-# configがなかったら起動を停止
-if [ ! -e /config.yaml ];then
-    echo "config.yaml が見つかりません。"
-    echo "configFileをdocker-composeなどで /config.yaml にマウントしてください"
-    echo "configファイルのサンプルは https://github.com/NamagomiNetwork/ace-attorney-discord-bot/blob/main/config.yaml.example を参照してください"
-    exit 1
-fi
+cat <<EOF | tee /ace-attorney-discord-bot/config.yaml
+token: "${TOKEN}"
+prefix: "${PREFIX}"
+deletionDelay: "0" # if set to 0 (or lower), the deletion queue will be disabled.
+max_tasks:
+  per_guild: 100
+  per_user: 5
+EOF
 
-cp /config.yaml /ace-attorney-discord-bot/config.yaml
 cd /ace-attorney-discord-bot || exit
 
 python3 main.py

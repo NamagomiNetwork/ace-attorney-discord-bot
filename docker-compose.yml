@@ -3,5 +3,6 @@ version: '3'
 services:
   aaaaa:
     image: ghcr.io/namagominetwork/ace-attorney-discord-bot:28f8bab
-    volumes:
-      - ./config.yaml:/config.yaml
+    environment:
+     - TOKEN=TOKEN
+     - PREFIX=!  
