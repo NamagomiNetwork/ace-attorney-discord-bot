@@ -2,7 +2,7 @@ version: '3'
 
 services:
   aaaaa:
-    image: ghcr.io/namagominetwork/ace-attorney-discord-bot:f7a0c8b
+    image: ghcr.io/namagominetwork/ace-attorney-discord-bot:e1c49fb
     environment:
      - TOKEN=TOKEN
      - PREFIX=!  
