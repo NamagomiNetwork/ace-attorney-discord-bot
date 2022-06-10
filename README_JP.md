@@ -10,7 +10,7 @@ https://user-images.githubusercontent.com/100725601/172297813-2e6fe42c-b997-452d
 
 ## docker
 
-Docker及びdocker-composeが入っている場合 [docker-compose.yml](./docker-compose.yml) を参考に構築してください
+Docker及びdocker-composeが入っている場合 [docker-compose.yml](./docker-compose.yml) を参考にENVにTOKENをprefixを指定してください
 
 ## 手動で構築
 
